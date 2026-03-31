@@ -24,6 +24,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v2.6.1
         with:
           files: target/*.jar
+          tag_name: auto
