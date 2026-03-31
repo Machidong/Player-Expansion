@@ -237,7 +237,7 @@ public final class PlayerExpansion extends PlaceholderExpansion implements Confi
             case "servername":
                 return "now available in the server expansion";
             case "displayname":
-                return p.getDisplayName();
+                return p.getDisplayName().replaceAll("(?i)§[0-9A-FK-OR]", "");
             case "list_name":
                 return p.getPlayerListName();
             case "gamemode":
